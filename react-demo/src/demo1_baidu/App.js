@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import logo from './res/logo.svg';
-import home from './res/home-bg.jpg';
-import baidulogo from './res/baidu-logo.png';
 import './App.css';
+import logo from '../res/logo.svg';
+import home from '../res/home-bg.jpg';
+import baidulogo from '../res/baidu-logo.png';
 
 // 外部属性声明
 var hi_str = "string";
