@@ -9,6 +9,11 @@ var hi_str = "string";
 var hi_number = 123;
 var hi_map = {"key1":"hi","key2":hi_array}
 var hi_array = [1,2,3,4,5,hi_str,hi_number,hi_map];
+var hi_object = {
+  p1 : 123,
+  p2 : 456,
+  p3 : hi_map,
+}
 var helloFunc = () => {
   console.log('hello, world!');
 }
@@ -28,7 +33,7 @@ function hi_testParams(var1,var2,var3) {
   var1.forEach(element => {
     // 判断对象类型
     console.log(typeof element,element.constructor.name);
-    if (element.constructor.name == "Number") {
+    if (element.constructor.name === "Number") {
       console.log("this is number",element);
     }
   });
@@ -47,6 +52,7 @@ class BaiduDemo extends Component {
     console.log(this.hello_map);
     console.log(this.hello_func);
   }
+
 
   // 内部属性声明
   hello_str = "这是一个自己判断类型的属性";
@@ -67,8 +73,8 @@ class BaiduDemo extends Component {
       <div className="App">
 
       {/* 背景图片 */}
-      {/* <div className="App-bgImage" style={{backgroundImage: `url(${home})`}}></div> */}
-      <img src={home} alt="" className="App-bgImage" />
+      <div className="App-bgImage" style={{backgroundImage: `url(${home})`}}></div>
+      {/* <img src={home} alt="" className="App-bgImage" /> */}
 
       {/* 上方导航栏 */}
       <div className="App-topNav">
@@ -91,11 +97,18 @@ class BaiduDemo extends Component {
             <a href="" className="App-topNavTextRight">学术</a>
             <a href="" className="App-topNavTextRight">用户名</a>
             <a href="" className="App-topNavTextRight">设置</a>
-            <button className="App-moreBtn">更多产品</button>
+            <button id="morebtn" className="App-moreBtn" >更多产品</button>
           </div>
-
         </div>
       </div>
+
+      <script>
+        {
+          // alert("123")
+          // 如果这里写 js ,会在加载界面前调用，所以会取不到对象报错。
+          // document.getElementById("morebtn")style.color="red"
+        }
+      </script>
 
       {/* logo */}
       {/* rel="noopener noreferrer" 防止钓鱼，更安全 */}
@@ -108,13 +121,13 @@ class BaiduDemo extends Component {
       {/* 输入框模块 */}
       <div className="App-input-bg">
         {/* 输入框 */}
-        <input className="App-input"/>
+        <input id="searchInput" className="App-input"/>
         {/* 语音 button */}
         <button className="App-imgBtn" ></button>
         {/* 识图 button */}
         <button className="App-imgBtn" style={{margin:"0 0 0 10px"}}></button>
         {/* 百度一下 button */}
-        <span><button className="App-searchBtn" >百度一下</button></span>
+        <button className="App-searchBtn" onClick={clickSearchBtn} >百度一下</button>
       </div>
       
       {/* 底部信息 */}
@@ -129,6 +142,12 @@ class BaiduDemo extends Component {
       </div>
     );
   }
+}
+
+// 点击搜索 取出输入框中的内容 并弹窗
+function clickSearchBtn(params) {
+  var searchText = document.getElementById("searchInput");
+  const answer = alert('search: ' + searchText.value);
 }
 
 export default BaiduDemo;
