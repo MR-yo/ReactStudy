@@ -1,0 +1,155 @@
+.App {
+  width: 100%;
+}
+
+.App-topView{
+  margin: 0 auto;
+  width: 100%;
+  height: 120px;
+  background-color: ivory;
+}
+
+.App-logo{
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  top: 0;
+  margin: 10px 0 10px 20px;
+  text-align: center;
+  position: absolute;
+  animation: App-logo-spin infinite 20s linear;
+}
+
+.App-topTitle{
+  display: inline-block;
+  height: 120px;
+  line-height: 120px;
+  font-size: 36px;
+  font-family: "STKaiti",Helvetica, Tahoma, Arial;
+  margin: 0 0 0 120px;
+  position: absolute;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.App-bottomView{
+  display: block;
+  background-color: #EAE3C5;
+  margin: 0 0 0 0;
+  height: 540px;
+  width: 100%;
+}
+
+.App-showImage{
+  display: inline-block;
+  position: absolute;
+  width: 420px;
+  height: 400px;
+  background-image: url(../res/img01.png);
+  margin-left: 150px;
+  margin-top: 50px;
+}
+
+.login-bg{
+  margin: 50px 0 0 800px;
+  width: 350px;
+  height: 398px;
+  display: inline-block;
+  /* text-align: center; */
+  background-image: url(../res/img02.png);
+}
+
+.login-table{
+  margin: auto;
+  width: 280;
+  position: relative;
+  z-index: 10;
+}
+
+.login-tableCell{
+  width: 280px;
+  height: 35px;
+}
+
+.login-userName{
+  width: 250px;
+  height: 35px;
+  font-family:"微软雅黑";
+  font-weight:800;
+  padding-left:10px;
+  padding-right:10px;
+  margin: 0 auto;
+  border-color: #EAE3C5;
+  border-width: 1px;
+  border-style: ridge;
+}
+
+.login-password{
+  width: 250px;
+  height: 35px;
+  margin: 10px auto 0px;
+  font-family:"微软雅黑";
+  font-weight:800;
+  padding-left:10px;
+  padding-right:10px;
+  border-color: #EAE3C5;
+  border-width: 1px;
+  border-style: dashed;
+}
+
+.login-verifyCode-input{
+  width: 120px; 
+  color:#da0000;
+  font-family:"微软雅黑";
+  font-weight:800;
+  text-align:left; 
+  display:block; 
+  float:right;
+  height: 35px;
+	line-height:35px;
+	padding-left:10px;
+  border:1px solid #ececec;
+  margin-top: 10px;
+}
+
+.login-verifyCode{
+  width: 120px; 
+  color:#da0000;
+  background-color: #EAE3C5;
+  font-family:"微软雅黑";
+  font-weight: 800;
+  text-align:center; 
+  display:block; 
+  float:right;
+	height:35px;
+	line-height:35px;
+	padding-left:10px;
+  border:1px solid #ececec;
+  margin-top: 10px;
+}
+
+.login-remenberPwd{
+  text-align: left;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.login-button{
+  width: 100px;
+  height: 30px;
+}
+
+.login-title{
+  display: inline-block;
+  margin: 30px auto 20px;
+  font-family: "微软雅黑";
+  font-size: 20px;
+  font-weight: 800;
+  text-align: center;
+  width: 100%;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
